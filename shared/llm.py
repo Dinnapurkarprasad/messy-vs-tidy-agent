@@ -1,9 +1,15 @@
 import os
 
 from dotenv import load_dotenv
+from langchain.agents.middleware import ModelRetryMiddleware
 from langchain_openai import ChatOpenAI
 
 load_dotenv()
+
+# Reliability, NOT context engineering: both agents get it so a free-tier hiccup doesn't kill a run.
+# max_retries below only covers HTTP errors; OpenRouter sometimes sends errors like
+# "504 A Timeout Occurred" inside a normal response, which only this catches.
+RETRY = ModelRetryMiddleware(max_retries=4, initial_delay=5, on_failure="error")
 
 
 def get_llm():
