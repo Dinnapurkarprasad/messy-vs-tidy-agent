@@ -1,0 +1,7 @@
+langchain>=1.0
+langchain-openai
+langsmith
+python-dotenv
+ddgs
+wikipedia
+pytest
