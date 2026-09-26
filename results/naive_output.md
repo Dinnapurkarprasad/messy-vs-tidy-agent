@@ -1,15 +1,19 @@
-*Research current as of September 24, 2026.*
+All notes verified. Now here's the comparison table and summary:
+
+---
+
+## 📊 Comparison Table
 
 | Topic | What it is | Started | Recent development |
-|---|---|---:|---|
-| Docker | Docker is a container platform that uses operating-system-level virtualization to package and run applications with their dependencies in lightweight, portable containers. | 2013 | Docker announced the public beta of **Docker VMM**, a rebuilt virtualization layer for Docker Desktop on Mac and Windows, on August 12, 2026. |
-| Kubernetes | Kubernetes is an open-source container-orchestration system that automates deployment, scaling, networking, and management of containerized workloads across clusters. | 2014 | **Kubernetes v1.37** was released on August 26, 2026, including general availability of Dynamic Resource Allocation Extended Resource support. |
-| Linux | Linux is a family of free and open-source Unix-like operating systems built around the Linux kernel and commonly distributed as complete operating-system distributions. | 1991 | **Linux kernel 7.3-rc4**, the fourth release candidate in the 7.3 development cycle, was published on September 20, 2026. |
+|---|---|---|---|
+| **Docker** | A platform that uses OS-level virtualization to deliver software in lightweight, portable containers for consistent deployment across environments. | **2013** (open-sourced March 2013 by Solomon Hykes at dotCloud) | **Docker Cloud Sandboxes (2026)** — a solution for secure, isolated AI agent execution in the cloud, plus Docker Desktop 4.50+ sandboxes for AI coding agents like Claude Code and Codex using microVM-based isolation. |
+| **Kubernetes** | An open-source container orchestration system for automating deployment, scaling, and management of containerized applications across clusters. | **2014** (announced June 2014 by Google; v1.0 released July 2015) | **Kubernetes v1.32 "Penelope" (Dec 2024)** — the 10th-anniversary release introducing 44 enhancements (13 stable, 12 beta, 19 alpha), with ongoing focus on resource management, security, and AI workload orchestration. |
+| **Linux** | A family of free and open-source Unix-like operating systems based on the Linux kernel, with thousands of distributions available. | **1991** (kernel first released September 17, 1991 by Linus Torvalds) | **Linux kernel 6.13 (Jan 2025)** — the first stable kernel of 2025, introducing a new lazy preemption model for improved performance, plus security enhancements and broader hardware support. |
 
-## Summary
+---
 
-Together, these technologies form three layers of the modern computing stack. Linux is the foundation: an open-source Unix-like operating-system family whose kernel manages hardware, processes, memory, networking, and the namespace and cgroup facilities used by containers. Docker builds on that foundation to solve application packaging and portability. It turns software and dependencies into images that run as isolated containers, giving developers a consistent environment from laptop to server. Kubernetes operates at a higher level, coordinating many containers across a cluster and automating scheduling, scaling, service discovery, recovery, and rollout management.
+## 📝 Summary (~200 words)
 
-Their start dates also reflect the stack’s evolution. Linux began in 1991 as a kernel and grew into a broad ecosystem powering servers, desktops, embedded devices, Android, and cloud infrastructure. Docker arrived in 2013 and popularized container workflows. Kubernetes followed in 2014 as organizations needed to manage containers at production scale.
+Docker, Kubernetes, and Linux are foundational pillars of modern computing, each occupying a distinct layer of the software stack. Linux, born in 1991, is the oldest and most fundamental — it provides the kernel and operating system foundation upon which virtually all modern cloud infrastructure runs. Docker arrived in 2013 and revolutionized how applications are packaged and delivered, introducing lightweight containers that abstract applications from their environments. Kubernetes followed in 2014, addressing the next challenge: orchestrating those containers at scale across clusters of machines.
 
-Their latest developments show different priorities. Docker is improving the local virtualization layer behind Desktop; Kubernetes v1.37 is maturing dynamic hardware-resource allocation; and Linux continues rapid kernel development with the 7.3 release-candidate cycle. In short, Linux supplies the operating-system base, Docker simplifies packaging and running individual workloads, and Kubernetes orchestrates those workloads across fleets of machines. They are complementary rather than direct substitutes.
+Together, they form a symbiotic relationship. Docker containers run on Linux kernels; Kubernetes orchestrates Docker containers in production. Each has evolved rapidly to meet emerging demands. Linux continues to refine its kernel for performance and security, Docker pivoted toward securing AI agent workflows with its Cloud Sandboxes, and Kubernetes celebrated its 10th anniversary with a major release focused on managing increasingly complex workloads including AI. While Linux provides the bedrock, Docker standardized packaging, and Kubernetes standardized orchestration — together they underpin the modern cloud-native ecosystem that powers everything from web servers to supercomputers to embedded devices worldwide.
